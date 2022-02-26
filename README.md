@@ -16,7 +16,7 @@ yarn add react-native-secure-api
 
 ## Manual Installation
 
-# local.properties
+### local.properties
 
 Add the following lines to local.properties
 
@@ -27,7 +27,7 @@ API_KEY="YOUR_API_KEY"
 API_SECRET="YOUR_API_SECRET"
 ```
 
-# build.gradle(app)
+### build.gradle(app)
 
 Add the following lines to android>app>build.gradle
 
@@ -42,13 +42,13 @@ defaultConfig {
     buildTypes {
         debug{
             buildConfigField 'String', 'BASE_URL_DEV', properties.getProperty('BASE_URL_DEV', '"no URL"')//<- Add this line
-             buildConfigField 'String', 'API_KEY', properties.getProperty('API_KEY', '"no key"')//<- Add this line if you need api key
-              buildConfigField 'String', 'API_SECRET', properties.getProperty('API_SECRET', '"no URL"')//<- Add this line if you need api secret
+            buildConfigField 'String', 'API_KEY', properties.getProperty('API_KEY', '"no key"')//<- Add this line if you need api key
+            buildConfigField 'String', 'API_SECRET', properties.getProperty('API_SECRET', '"no URL"')//<- Add this line if you need api secret
         }
         release {
             buildConfigField 'String', 'BASE_URL', properties.getProperty('BASE_URL', '"no URL"')//<- Add this line
-              buildConfigField 'String', 'API_KEY', properties.getProperty('API_KEY', '"no key"')//<- Add this line if you need api key
-              buildConfigField 'String', 'API_SECRET', properties.getProperty('API_SECRET', '"no URL"')//<- Add this line if you need api secret
+            buildConfigField 'String', 'API_KEY', properties.getProperty('API_KEY', '"no key"')//<- Add this line if you need api key
+            buildConfigField 'String', 'API_SECRET', properties.getProperty('API_SECRET', '"no URL"')//<- Add this line if you need api secret
         }
     }
 }
