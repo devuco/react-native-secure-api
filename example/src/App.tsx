@@ -1,13 +1,16 @@
 import * as React from 'react';
-
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-secure-api';
+import { StyleSheet, Text, View } from 'react-native';
+import Credentials from 'react-native-secure-api';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [result, setResult] = React.useState<string | undefined>();
 
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+    const getUrl = async () => {
+      const url = await Credentials.get('BASE_URL');
+      setResult(url);
+    };
+    getUrl();
   }, []);
 
   return (

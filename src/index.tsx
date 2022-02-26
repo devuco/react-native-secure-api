@@ -17,6 +17,10 @@ const SecureApi = NativeModules.SecureApi
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return SecureApi.multiply(a, b);
-}
+const get = (key: string): Promise<string> => {
+  return SecureApi.getKey(key);
+};
+
+const Credentials = { get };
+
+export default Credentials;

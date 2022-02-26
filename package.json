@@ -1,7 +1,7 @@
 {
   "name": "react-native-secure-api",
   "version": "0.1.0",
-  "description": "library",
+  "description": "A react-native library to secure api credentials(URL, Key, Secret) from exposing to source control and bundle in apk files.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
