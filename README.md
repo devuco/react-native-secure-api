@@ -1,6 +1,7 @@
 # react-native-secure-api
 
 A react-native library to secure api credentials(URL, Key, Secret) from exposing to source control and bundle in apk files.
+Currently supporting android only
 
 ## Installation
 
