@@ -14,7 +14,7 @@ or
 yarn add react-native-secure-api
 ```
 
-## Manual Installation
+## Configuartion
 
 ### local.properties
 
@@ -52,6 +52,12 @@ defaultConfig {
         }
     }
 }
+```
+
+### Proguard Rule
+```pro
+# Keep the BuildConfig
+-keep class com.example.BuildConfig { *; }
 ```
 
 ## Usage
