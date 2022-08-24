@@ -2,8 +2,18 @@
 
 @interface RCT_EXTERN_MODULE(SecureApi, NSObject)
 
-RCT_EXTERN_METHOD(multiply:(float)a withB:(float)b
-                 withResolver:(RCTPromiseResolveBlock)resolve
-                 withRejecter:(RCTPromiseRejectBlock)reject)
 
+RCT_EXPORT_METHOD(getKey:(NSString*)key resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
+  
+  NSString *apikey =[[NSBundle mainBundle] objectForInfoDictionaryKey:key];
+  if (apikey != NULL && apikey != nil) {
+    resolve(apikey);
+
+  }
+  else
+  {
+    NSLog(@"key not found");
+  }
+  
+}
 @end
